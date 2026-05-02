@@ -4,81 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>L'Atelier Coupe | Salon de Coiffure Aix-en-Provence</title>
-<meta name="description" content="Salon de coiffure haut de gamme à Aix-en-Provence. Coupes femme, homme, coloration, soins Kérastase. 8 Rue Joseph Cabassol. Prenez rendez-vous.">
+<meta name="description" content="Salon de coiffure haut de gamme a Aix-en-Provence. Coupes femme, homme, coloration, soins Kerastase. 8 Rue Joseph Cabassol. Prenez rendez-vous.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--noir:#0A0A0A;--or:#C9A962;--or-pale:#E8DCC8;--gris:#1E1E1E;--blanc:#FAFAF8;}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Syne',sans-serif;background:var(--noir);color:var(--blanc);line-height:1.7;font-size:16px;font-weight:400}
-img{max-width:100%;display:block;height:auto}
-
-/* Subtle gold grain */
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-/* Nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,169,98,.15);padding:0 5vw;display:flex;justify-content:space-between;align-items:center;height:76px}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--or)}
-.nav-logo em{font-style:italic;font-weight:400}
-.nav-links{display:flex;gap:3rem}
-.nav-links a{color:var(--blanc);text-decoration:none;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.7;transition:opacity .3s;padding:.5rem 0}
-.nav-links a:hover{opacity:1;color:var(--or)}
-
-/* Hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding:10vh 5vw 8vh;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-20%;right:-10%;width:50vw;height:50vw;border:1px solid rgba(201,169,98,.08);border-radius:50%}
-.hero-content{max-width:700px;position:relative;z-index:2}
-.hero-label{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:2rem;display:block}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:1.05;margin-bottom:2rem}
-.hero h1 em{font-style:italic;font-weight:400;color:var(--or)}
-.hero-desc{font-size:1.1rem;opacity:.65;max-width:480px;margin-bottom:3rem;font-weight:300}
-.hero-cta{display:inline-block;border:1px solid var(--or);color:var(--or);padding:1.1rem 3rem;font-size:.75rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .35s}
-.hero-cta:hover{background:var(--or);color:var(--noir)}
-
-/* Section commons */
-.section{padding:8rem 5vw}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-label{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:1.5rem;display:block}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;margin-bottom:4rem;line-height:1.1}
-
-/* Prestations */
-.prestations{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(201,169,98,.2)}
-.presta{padding:2.5rem 2rem;border-bottom:1px solid rgba(201,169,98,.2);transition:background .3s}
-.presta:hover{background:rgba(201,169,98,.04)}
-.presta-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.75rem}
-.presta h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400}
-.presta-price{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or);font-weight:300}
-.presta p{font-size:.85rem;opacity:.55;line-height:1.6}
-
-/* Team */
-.team-section{background:var(--gris)}
-.team{display:flex;gap:4rem;justify-content:center;flex-wrap:wrap}
-.member{text-align:center}
-.member-img{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--gris),#2a2a2a);border:1px solid rgba(201,169,98,.3);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center}
-.member h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;margin-bottom:.25rem}
-.member p{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.5}
-
-/* Contact */
-.contact-section{text-align:center}
-.contact-section .section-title{margin-bottom:2rem}
-.contact-info p{margin-bottom:1rem;font-size:1.05rem;opacity:.8}
-.contact-info a{color:var(--or);text-decoration:none}
-.contact-info a:hover{text-decoration:underline}
-.contact-hours{margin-top:2rem;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.4}
-
-/* Footer */
-.footer{text-align:center;padding:4rem 5vw;border-top:1px solid rgba(201,169,98,.15)}
-.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--or);margin-bottom:.5rem}
-.footer p{font-size:.75rem;opacity:.4}
-
-@media(max-width:768px){
-  .nav-links{gap:1.5rem}
-  .nav-links a{font-size:.65rem}
-  .prestations{grid-template-columns:1fr}
-  .team{gap:2rem}
-  .hero h1{font-size:2.8rem}
-}
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  html{scroll-behavior:smooth}
+  :root{--noir:#0A0A0A;--or:#C9A962;--or-pale:#E8DCC8;--gris:#1E1E1E;--blanc:#FAFAF8;}
+  body{font-family:'Syne',sans-serif;background:var(--noir);color:var(--blanc);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,169,98,.15);padding:0 5vw;display:flex;justify-content:space-between;align-items:center;height:72px}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--or)}
+  .nav-logo em{font-style:italic;font-weight:400}
+  .nav-links{display:flex;gap:2.5rem}
+  .nav-links a{color:var(--blanc);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.7;transition:opacity .3s;padding:.5rem 0}
+  .nav-links a:hover{opacity:1;color:var(--or)}
+  .hero{min-height:100vh;display:flex;align-items:center;padding:10vh 5vw 8vh;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-20%;right:-10%;width:50vw;height:50vw;border:1px solid rgba(201,169,98,.08);border-radius:50%}
+  .hero-content{max-width:650px;position:relative;z-index:2}
+  .hero-label{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:1.5rem;display:block}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--or)}
+  .hero-desc{font-size:1rem;font-weight:300;opacity:.65;max-width:420px;margin-bottom:2.5rem}
+  .hero-cta{display:inline-block;border:1px solid var(--or);color:var(--or);padding:1rem 2.5rem;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;transition:all .35s;width:fit-content}
+  .hero-cta:hover{background:var(--or);color:var(--noir)}
+  .section{padding:6rem 5vw}
+  .section-inner{max-width:1000px;margin:0 auto}
+  .section-label{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:1rem;display:block}
+  .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:300;margin-bottom:2.5rem;line-height:1.1}
+  .prestations{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(201,169,98,.2)}
+  .presta{padding:2rem 1.5rem;border-bottom:1px solid rgba(201,169,98,.2);transition:background .3s}
+  .presta:hover{background:rgba(201,169,98,.04)}
+  .presta-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.5rem;gap:1rem}
+  .presta h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400}
+  .presta-price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--or);font-weight:300;white-space:nowrap}
+  .presta p{font-size:.85rem;opacity:.55;line-height:1.6}
+  .team-section{background:var(--gris)}
+  .team{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap}
+  .member{text-align:center}
+  .member-img{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;border:1px solid rgba(201,169,98,.3)}
+  .member-img img{width:100%;height:100%;object-fit:cover}
+  .member h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;margin-bottom:.2rem}
+  .member p{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;opacity:.5}
+  .contact-section{text-align:center}
+  .contact-section .section-title{margin-bottom:1.5rem}
+  .contact-info p{margin-bottom:.75rem;font-size:1rem;opacity:.8}
+  .contact-info a{color:var(--or);text-decoration:none}
+  .contact-info a:hover{text-decoration:underline}
+  .contact-hours{margin-top:1.5rem;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.4}
+  .contact-map{margin-top:2rem;border-radius:16px;overflow:hidden;height:280px;max-width:700px;margin-left:auto;margin-right:auto}
+  .contact-map iframe{width:100%;height:100%;border:0}
+  .footer{text-align:center;padding:3rem 5vw;border-top:1px solid rgba(201,169,98,.15)}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:.5rem}
+  .footer p{font-size:.75rem;opacity:.4}
+  @media(max-width:768px){
+    .nav-links{gap:1.5rem}
+    .nav-links a{font-size:.6rem}
+    .prestations{grid-template-columns:1fr}
+    .team{gap:2rem}
+    .hero h1{font-size:2.5rem}
+  }
 </style>
 </head>
 <body>
@@ -87,16 +73,16 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
   <div class="nav-logo">L'Atelier <em>Coupe</em></div>
   <div class="nav-links">
     <a href="#prestations">Prestations</a>
-    <a href="#equipe">Équipe</a>
+    <a href="#equipe">Equipe</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header class="hero" id="accueil">
   <div class="hero-content">
-    <span class="hero-label">Salon de Coiffure — Aix-en-Provence</span>
+    <span class="hero-label">Salon de Coiffure - Aix-en-Provence</span>
     <h1>L'art de la <em>coupe</em></h1>
-    <p class="hero-desc">Un salon intimiste où chaque visite est une pause dédiée à votre style. Cheveux courts, longs, bouclés : nous sublimons chaque nature.</p>
+    <p class="hero-desc">Un salon intimiste ou chaque visite est une pause dediee a votre style. Cheveux courts, longs, boucles : nous sublimons chaque nature.</p>
     <a href="tel:0442987654" class="hero-cta">Prendre rendez-vous</a>
   </div>
 </header>
@@ -110,44 +96,44 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
       <article class="presta">
         <div class="presta-header">
           <h3>Coupe Femme</h3>
-          <span class="presta-price">€32</span>
+          <span class="presta-price">&euro;32</span>
         </div>
-        <p>Shampoing, coupe personnalisée, brushing. Sur cheveux courts ou mi-longs.</p>
+        <p>Shampoing, coupe personnalisee, brushing. Sur cheveux courts ou mi-longs.</p>
       </article>
       <article class="presta">
         <div class="presta-header">
           <h3>Coupe + Couleur</h3>
-          <span class="presta-price">€45</span>
+          <span class="presta-price">&euro;45</span>
         </div>
-        <p>Coloration végétale ou traditionnelle, soin profond et brushing.</p>
+        <p>Coloration vegetale ou traditionnelle, soin profond et brushing.</p>
       </article>
       <article class="presta">
         <div class="presta-header">
           <h3>Coupe Homme</h3>
-          <span class="presta-price">€26</span>
+          <span class="presta-price">&euro;26</span>
         </div>
-        <p>Shampoing, coupe, finition à la tondeuse ou rasoir.</p>
+        <p>Shampoing, coupe, finition a la tondeuse ou rasoir.</p>
       </article>
       <article class="presta">
         <div class="presta-header">
           <h3>Mise en plis / Brushing</h3>
-          <span class="presta-price">€55</span>
+          <span class="presta-price">&euro;55</span>
         </div>
         <p>Brushing, lissage temporaire ou ondulations naturelles.</p>
       </article>
       <article class="presta">
         <div class="presta-header">
-          <h3>Soin profond Kérastase</h3>
-          <span class="presta-price">€85</span>
+          <h3>Soin profond Kerastase</h3>
+          <span class="presta-price">&euro;85</span>
         </div>
         <p>Rituel complet : diagnostic, soin sur-mesure, massage cuir chevelu.</p>
       </article>
       <article class="presta">
         <div class="presta-header">
           <h3>Enfant (-12 ans)</h3>
-          <span class="presta-price">€18</span>
+          <span class="presta-price">&euro;18</span>
         </div>
-        <p>Coupe adaptée dans une ambiance détendue et ludique.</p>
+        <p>Coupe adaptee dans une ambiance detendue et ludique.</p>
       </article>
     </div>
   </div>
@@ -155,22 +141,22 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
 
 <section class="section team-section" id="equipe">
   <div class="section-inner">
-    <span class="section-label">L'équipe</span>
+    <span class="section-label">L'equipe</span>
     <h2 class="section-title">Nos artistes</h2>
     <div class="team">
       <div class="member">
-        <img src="salon.jpg" alt="Intérieur du salon de coiffure" class="member-img" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        <div class="member-img"><img src="salon.jpg" alt="Pauline, coloriste"></div>
         <h4>Pauline</h4>
-        <p>Coloriste &amp; Créatrice</p>
+        <p>Coloriste &amp; Creatrice</p>
       </div>
       <div class="member">
-        <img src="salon.jpg" alt="Espace barber du salon" class="member-img" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:hue-rotate(20deg);">
+        <div class="member-img"><img src="salon.jpg" alt="Thomas, barber" style="filter:hue-rotate(20deg)"></div>
         <h4>Thomas</h4>
         <p>Barber &amp; Coupe Homme</p>
       </div>
       <div class="member">
-        <img src="salon.jpg" alt="Espace coloration du salon" class="member-img" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:hue-rotate(-20deg);">
-        <h4>Léa</h4>
+        <div class="member-img"><img src="salon.jpg" alt="Lea, styliste" style="filter:hue-rotate(-20deg)"></div>
+        <h4>Lea</h4>
         <p>Styliste &amp; Extensions</p>
       </div>
     </div>
@@ -179,22 +165,25 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
 
 <section class="section contact-section" id="contact">
   <div class="section-inner">
-    <span class="section-label">Réservation</span>
+    <span class="section-label">Reservation</span>
     <h2 class="section-title">Contact</h2>
     <div class="contact-info">
       <p>8 Rue Joseph Cabassol<br>13100 Aix-en-Provence</p>
       <p><a href="tel:0442987654">04 42 98 76 54</a></p>
       <p><a href="mailto:bonjour@lateliercoupe.fr">bonjour@lateliercoupe.fr</a></p>
     </div>
-    <p class="contact-hours">Mar–Sam : 9h – 19h · Lun : 14h – 19h · Dim : fermé</p><div style="margin-top:2rem;border-radius:16px;overflow:hidden;height:280px;"><iframe src="https://maps.google.com/maps?q=8+Rue+Joseph+Cabassol,+13100+Aix-en-Provence,+France&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte L'Atelier Coupe"></iframe></div>
+    <p class="contact-hours">Mar-Sam : 9h - 19h &middot; Lun : 14h - 19h &middot; Dim : ferme</p>
+    <div class="contact-map">
+      <iframe src="https://maps.google.com/maps?q=8+Rue+Joseph+Cabassol,+13100+Aix-en-Provence,+France&t=&z=16&ie=UTF8&iwloc=&output=embed" title="Carte L'Atelier Coupe" loading="lazy"></iframe>
+    </div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
   <div class="footer-brand">L'Atelier Coupe</div>
-  <p>8 Rue Joseph Cabassol — 13100 Aix-en-Provence</p>
-  <p style="margin-top:1rem;font-size:.65rem;opacity:.3;">Conception web par <a href="https://ak2r.com" target="_blank" style="color:var(--or);text-decoration:none;">Ak2rDev</a></p>
+  <p>8 Rue Joseph Cabassol - 13100 Aix-en-Provence</p>
+  <p style="margin-top:.75rem;font-size:.65rem;opacity:.3;">Conception web par <a href="https://ak2r.com" target="_blank" style="color:var(--or);text-decoration:none;">Ak2rDev</a></p>
 </footer>
 
 <script type="application/ld+json">
@@ -206,8 +195,9 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
   "telephone":"+33442987654",
   "email":"bonjour@lateliercoupe.fr",
   "openingHours":["Tu-Sa 09:00-19:00","Mo 14:00-19:00"],
-  "priceRange":"€€"
+  "priceRange":"&euro;&euro;"
 }
 </script>
+
 </body>
 </html>
