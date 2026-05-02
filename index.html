@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Atelier Coupe — Salon de Coiffure Aix</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap');
+  :root{--noir:#111;--or:#C5A059;--ivoire:#FAF9F6;--gris:#EAEAEA;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Montserrat',sans-serif;background:var(--ivoire);color:var(--noir);line-height:1.6;}
+  header{background:var(--noir);color:var(--ivoire);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;letter-spacing:2px;text-transform:uppercase;}
+  .logo span{color:var(--or);font-weight:600;}
+  nav a{color:var(--ivoire);text-decoration:none;margin-left:1.8rem;font-weight:400;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;}
+  .hero{background:var(--noir);color:var(--ivoire);padding:7rem 2rem 6rem;text-align:center;position:relative;overflow:hidden;}
+  .hero::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(197,160,89,.08),transparent 60%);}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;margin-bottom:1rem;position:relative;z-index:1;}
+  .hero p{font-size:1.1rem;font-weight:300;opacity:.85;max-width:550px;margin:0 auto 2rem;position:relative;z-index:1;}
+  .btn{border:1px solid var(--or);color:var(--or);padding:.9rem 2.2rem;text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;display:inline-block;transition:all .3s;position:relative;z-index:1;}
+  .btn:hover{background:var(--or);color:var(--noir);}
+  section{padding:5rem 2rem;max-width:1000px;margin:0 auto;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;text-align:center;margin-bottom:3rem;}
+  .prestations{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+  .presta{border-bottom:1px solid var(--gris);padding-bottom:1.5rem;}
+  .presta h4{font-weight:500;margin-bottom:.3rem;}
+  .presta .price{float:right;color:var(--or);font-weight:600;}
+  .presta p{font-size:.9rem;color:#555;clear:both;}
+  .team{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;}
+  .member{text-align:center;}
+  .member-avatar{width:120px;height:120px;border-radius:50%;background:var(--gris);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:2.5rem;border:2px solid var(--or);}
+  .member h4{font-weight:500;margin-bottom:.3rem;}
+  .member p{font-size:.8rem;color:#666;}
+  footer{background:var(--noir);color:var(--ivoire);text-align:center;padding:3rem 2rem;font-size:.85rem;}
+  footer a{color:var(--or);text-decoration:none;}
+  @media(max-width:768px){.hero h1{font-size:2.4rem;}.prestations{grid-template-columns:1fr;}nav a{margin-left:1rem;font-size:.75rem;}}
+</style>
+</head>
+<body>
+<header><div class="logo">L'Atelier <span>Coupe</span></div><nav><a href="#prestations">Prestations</a><a href="#equipe">Équipe</a><a href="#contact">Contact</a></nav></header>
+<section class="hero">
+  <h1>L'art de la coupe à Aix</h1>
+  <p>Un salon intimiste où chaque visite est une pause dédiée à votre style. Cheveux courts, longs, bouclés : nous subliment chaque nature.</p>
+  <a href="tel:0442987654" class="btn">Prendre rendez-vous</a>
+</section>
+<section id="prestations">
+  <h2 class="section-title">Prestations</h2>
+  <div class="prestations">
+    <div class="presta"><span class="price">€32</span><h4>Coupe Femme</h4><p>Shampoing, coupe, brushing — sur cheveux courts ou mi-longs.</p></div>
+    <div class="presta"><span class="price">€45</span><h4>Coupe + Couleur</h4><p>Coloration végétale ou traditionnelle, soin et brushing.</p></div>
+    <div class="presta"><span class="price">€26</span><h4>Coupe Homme</h4><p>Shampoing, coupe, finition à la tondeuse ou rasoir.</p></div>
+    <div class="presta"><span class="price">€55</span><h4>Mise en plis / Brush.</h4><p>Brushing, lissage temporaire ou ondulations naturelles.</p></div>
+    <div class="presta"><span class="price">€85</span><h4>Soin profond Kérastase</h4><p>Rituel complet : diagnostic, soin sur-mesure, massage cuir chevelu.</p></div>
+    <div class="presta"><span class="price">€18</span><h4>Enfant (-12 ans)</h4><p>Coupe adaptée dans une ambiance détendue et ludique.</p></div>
+  </div>
+</section>
+<section id="equipe" style="background:var(--gris);">
+  <h2 class="section-title">Notre équipe</h2>
+  <div class="team">
+    <div class="member"><div class="member-avatar">💇‍♀️</div><h4>Pauline</h4><p>Coloriste & Créatrice</p></div>
+    <div class="member"><div class="member-avatar">💈</div><h4>Thomas</h4><p>Barber & Coupe Homme</p></div>
+    <div class="member"><div class="member-avatar">✨</div><h4>Léa</h4><p>Styliste & Extensions</p></div>
+  </div>
+</section>
+<section id="contact" style="text-align:center;">
+  <h2 class="section-title">Réservation</h2>
+  <p style="margin-bottom:1.5rem;font-size:1.1rem;">8 Rue Joseph Cabassol<br>13100 Aix-en-Provence</p>
+  <p style="margin-bottom:1.5rem;">📞 <a href="tel:0442987654" style="color:var(--noir);text-decoration:none;font-weight:500;">04 42 98 76 54</a><br>✉️ <a href="mailto:bonjour@lateliercoupe.fr" style="color:var(--noir);text-decoration:none;">bonjour@lateliercoupe.fr</a></p>
+  <p style="font-size:.85rem;color:#777;">Mar–Sam : 9h – 19h · Lun : 14h – 19h · Dim : fermé</p>
+</section>
+<footer>
+  <p>L'Atelier Coupe — 8 Rue Joseph Cabassol, 13100 Aix</p>
+  <p style="margin-top:.5rem;font-size:.75rem;opacity:.6;">Conception web par <a href="https://ak2r.com" target="_blank">Ak2rDev</a></p>
+</footer>
+</body>
+</html>
